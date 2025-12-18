@@ -1,12 +1,47 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Developer Portfolio
+A personal portfolio showcasing projects, skills, theme-based styling, and a resume viewer. Built with Vite + React and custom CSS.
 
-Currently, two official plugins are available:
+# Features
+ @ Day-based theme selector with persistent choice (localStorage)
+ @ Profile, Skills (with tooltips), Projects, Comments/Feedback sections
+ @ Resume section with view/download buttons (linkable)
+ @ Responsive layout and smooth CSS animations
+ @ Easy theming using CSS variables
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ 
+# Project Structure
+portfolio/
+public/ — static assets
+src/
+App.jsx, App.css — app entry and global styles
+main.jsx — React entry
+components/
+code.jsx — main portfolio component (sections, state, handlers)
+codes.css — component styles
+assets/ — images used in themes and projects
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Build (production)
+@ How to Use / Customize
+  Theme colors: edit the themes object in code.jsx to change primary, secondary, and images.
+  Resume links: replace placeholder Google Docs URLs in the resume section with your resume                     PDF or public link.
+  Add projects: update the projects array in code.jsx with name, icon, url, and image.
+  Skill tooltips: update skillInfo mapping in code.jsx to tweak hover descriptions.
+  Accessibility & Performance Notes
+Headings use gradient text with fallbacks for better readability on non-WebKit browsers.
+Animations respect responsiveness; consider adding prefers-reduced-motion support if needed.
+Keep images optimized (compressed) to improve load times.
+
+# Common Commands
+Install: npm install
+Dev: npm run dev
+Build: npm run build
+Preview production build: npm run preview
+Troubleshooting
+
+License
+Add your preferred license information here (e.g., MIT).
+
+Would you like a shorter README or a version with badge links (build/status, license, contact) included?
